@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import Todo from "./Todo";
+import NewTodo from "./NewTodo";
 import {v1 as uuid} from "uuid";
 
 const Todolist = () => {
@@ -55,6 +56,7 @@ const Todolist = () => {
             Todo List
           </h1>
           <ul>{todosList}</ul>
+          <NewTodo createTodo={create} />
         </div>
       );
 };

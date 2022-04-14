@@ -1,9 +1,9 @@
 import React, { useState, useReducer } from "react";
 import ReactDOM from "react-dom";
-import uuid from "uuid";
-import "./newTodoForm.css";
+import {v1 as uuid} from "uuid";
+import "./NewTodo.css";
 
-function NewTodoForm({ task, createTodo }) {
+function NewTodo({ task, createTodo }) {
   const [userInput, setUserInput] = useReducer(
     (state, newState) => ({ ...state, ...newState }),
     {
@@ -23,7 +23,7 @@ function NewTodoForm({ task, createTodo }) {
   };
 
   return (
-    <form className="NewTodoForm" onSubmit={handleSubmit}>
+    <form className="NewTodo" onSubmit={handleSubmit}>
       <label htmlFor="task">New todo</label>
       <input
         value={userInput.task}
@@ -38,4 +38,4 @@ function NewTodoForm({ task, createTodo }) {
   );
 }
 
-export default NewTodoForm;
+export default NewTodo;
