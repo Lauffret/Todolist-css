@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import Todo from "./Todo";
 import NewTodo from "./NewTodo";
 import {v1 as uuid} from "uuid";
+import "./Todolist.css";
 
 const Todolist = () => {
     const [todos, setTodos] = useState([
